@@ -39,7 +39,21 @@ def select_all():
         hot_key(['ctrl', 'a'])
 
 
+def write(message, interval=0.0):
+    """Performs a keyboard key press down, followed by a release, for each of the characters in message."""
+    pyautogui.write(message, interval)
+
+
 def hot_key(btn_list):
+    """ Will click on a sequence of buttons. It works in this fashion:
+
+     1) Will hold down the first button
+     2) Will hold down the rest of the buttons
+     3) Will release the rest of the buttons
+     4) Will release the first button
+
+     In this way, you can do sequences like 'copy' 'paste' and more...
+     """
     pyautogui.keyDown(btn_list[0])
 
     time.sleep(1)
