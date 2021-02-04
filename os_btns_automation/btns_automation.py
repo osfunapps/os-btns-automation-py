@@ -1,6 +1,7 @@
 import pyautogui
 import time
 
+
 def paste():
     """Will paste"""
     from sys import platform
@@ -19,6 +20,16 @@ def copy():
         hot_key(['ctrl', 'c'])
 
 
+def key_down(key):
+    """Will hold on a key down """
+    pyautogui.keyDown(key)
+
+
+def key_up(key):
+    """Will release a down key """
+    pyautogui.keyUp(key)
+
+
 def select_all():
     """Will select all."""
     from sys import platform
@@ -33,14 +44,14 @@ def hot_key(btn_list):
 
     time.sleep(1)
     for i in range(1, len(btn_list)):
-        pyautogui.keyDown(btn_list[i])
+        key_down(btn_list[i])
 
     time.sleep(1)
     for i in range(1, len(btn_list)):
-        pyautogui.keyUp(btn_list[i])
+        key_up(btn_list[i])
 
     time.sleep(1)
-    pyautogui.keyUp(btn_list[0])
+    key_up(btn_list[0])
 
 
 def press(keys, presses=1, interval=0.0):

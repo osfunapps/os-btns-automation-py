@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='os_btns_automation',  # How you named your package folder (MyLib)
     packages=['os_btns_automation'],  # Choose the same as "name"
-    version='1.00',  # Start with a small number and increase it with every change you make
+    version='1.01',  # Start with a small number and increase it with every change you make
     license='MIT',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='py buttons automation utils for os',  # Give a short description about your library
     author='Oz Shabat',  # Type in your name

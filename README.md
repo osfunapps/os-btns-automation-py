@@ -21,6 +21,8 @@ Require btns_automation:
     btns_automation.select_all()  # will select all in the current context
     btns_automation.press('esc')  # will press a button
     btns_automation.hot_key(['ctrl', 'c'])  # will perform instrumental combo of buttons
+    btns_automation.key_down('esc')  # will hold a key down
+    btns_automation.key_up('esc')  # will release a key
 
 
 
